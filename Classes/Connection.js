@@ -102,8 +102,7 @@ function onClose() {
 }
 
 function onConnected(status) {
-	if (status.state == "connected" && status.version[0] == Version.charCodeAt(0) && status.version[1] <= Version.charCodeAt(1)) {
-		this.version = status.version.toString();
+	if (status.state == "connected") {
 		this.emit("connected");
 		this.on("status", onStatus);
 	} else {
@@ -156,7 +155,6 @@ class Connection extends Event {
     constructor(port, ip) {
         super();
 
-		this.version = "\0\0";
 		let _this = this;
 		
         let socket = net.connect(port, ip, () => {

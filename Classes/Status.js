@@ -45,13 +45,7 @@ function makeStatus(data) {
 		case 1:
 			Status.state = "connected";
 			
-			if (data.length < 3) {
-				throw new Error("data");
-			}
-			
-			Status["version"] = data.slice(1, 4);
-			
-			Status.size = 4
+			Status.size = 1;
 			return Status;
 		case 2:
 			Status.state = "assigned";
