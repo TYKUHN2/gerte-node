@@ -1,6 +1,6 @@
 {
-  "name": "@tykuhn2/gateway",
-  "version": "1.1.0",
+  "name": "gerte",
+  "version": "1.1.1",
   "description": "NodeJS Implementation of the GERTe Gateway",
   "main": "main.js",
   "scripts": {
@@ -10,11 +10,6 @@
     "type": "git",
     "url": "github:TYKUHN2/gerte-node"
   },
-  "alt-repo": {
-    "type": "git",
-    "url": "github:GlobalEmpire/GERT",
-    "directory":  "GERTe/Gateway/NodeJS"
-  },
   "keywords": [
     "client",
     "tunnel",
@@ -23,7 +18,7 @@
     "gert"
   ],
   "engines": {
-    "node": "^11.1.0"
+    "node": "^13.8.0"
   },
   "author": "Tyler Kuhn [TYKUHN2] <contact@tyknet.tk>",
   "license": "UNLICENSED",
