@@ -128,11 +128,11 @@ function onRegistered(status, newAddr) {
 			this.emit("error", new Error("GEDS reports that the requested address is already claimed"));
 			return;
 		}
+	} else {
+		this.once("status", (status) => {
+			onRegistered.call(this, status, newAddr);
+		});
 	}
-	
-	this.once("status", (status) => {
-		onRegistered.call(this, status, newAddr);
-	});
 }
 
 function onStatus(status) {
@@ -273,7 +273,7 @@ class Connection extends Event {
     }
 
     close() {
-        this._socket.write("\3");
+        this._socket.write(0x03);
         this._socket.end();
     }
 }
