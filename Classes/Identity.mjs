@@ -1,13 +1,10 @@
-'use strict';
-
-const Address = require("./Address.js");
-const Database = require("./KeyDatabase.js");
-const crypto = require("crypto");
+import crypto from "crypto";
+import Address from "Address";
 
 /**
  * A GERTe identity.
  */
-class Identity {
+export default class Identity {
     #address
     #key
 
@@ -48,5 +45,3 @@ class Identity {
         return this.#key;
     }
 }
-
-module.exports = Identity;

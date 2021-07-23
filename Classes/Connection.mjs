@@ -1,17 +1,15 @@
-'use strict';
-
-const net = require("net");
-const crypto = require("crypto");
-const Identity = require("./Identity.js");
-const EventEmitter = require("events");
-const Address = require("./Address.js");
-const Packet = require("./Packet.js");
-const KeyDatabase = require("./KeyDatabase.js");
+import net from "net";
+import crypto from "crypto";
+import Packet from "Packet";
+import Address from "Address";
+import Identity from "Identity";
+import EventEmitter from "events";
+import KeyDatabase from "KeyDatabase";
 
 /**
  * Represents a connection to a peer and handles negotiation and communication.
  */
-class Connection extends EventEmitter {
+export default class Connection extends EventEmitter {
     /**
      * @type {net.Socket}
      */
@@ -185,5 +183,3 @@ class Connection extends EventEmitter {
         return new Packet(source, destination, dat);
     }
 }
-
-module.exports = Connection;

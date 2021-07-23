@@ -1,10 +1,8 @@
-'use strict';
+import fs from "fs";
+import crypto from "crypto";
+import Address from "Address";
 
-const fs = require("fs");
-const crypto = require("crypto");
-const Address = require("./Address.js");
-
-class KeyDatabase {
+export default class KeyDatabase {
     static #loaded = false;
     static #db = new Map();
 
@@ -37,5 +35,3 @@ class KeyDatabase {
             return this.#db.get(target.address);
     }
 }
-
-module.exports = KeyDatabase;

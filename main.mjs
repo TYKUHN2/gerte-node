@@ -9,9 +9,10 @@
 	Packet: A packet containing a source, destination, and data.
 */
 
-exports["version"] = "\2\0";
-exports["api"] = "2.0.0";
-exports["Connection"] = require("./Classes/Connection");
-exports["Address"] = require("./Classes/Address");
-exports["Identity"] = require("./Classes/Identity");
-exports["Packet"] = require("./Classes/Packet");
+export let  version = "\2\0",
+            api = "2.0.0";
+
+export { default as Connection } from "Classes/Connection";
+export { default as Address } from "Classes/Address";
+export { default as Identity } from "Classes/Identity";
+export { default as Packet } from "Classes/Packet";

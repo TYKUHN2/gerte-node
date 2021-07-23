@@ -1,8 +1,6 @@
-'use strict';
+import Address from "Address";
 
-const Address = require("./Address.js");
-
-class Packet {
+export default class Packet {
     #source;
     #destination;
     #data;
@@ -47,5 +45,3 @@ class Packet {
         this.#data = data;
     }
 }
-
-module.exports = Packet;

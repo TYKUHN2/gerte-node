@@ -1,8 +1,8 @@
 {
   "name": "gerte",
-  "version": "2.0",
+  "version": "2.0.0",
   "description": "NodeJS Implementation of the GERTe Gateway",
-  "main": "main.js",
+  "main": "main.mjs",
   "scripts": {
     "test": "echo \"Error: No official test exists\" && exit 1"
   },
@@ -18,7 +18,7 @@
     "gert"
   ],
   "engines": {
-    "node": "^16.4.1"
+    "node": "^16.5.0"
   },
   "author": "Tyler Kuhn [TYKUHN2] <contact@tyknet.tk>",
   "license": "UNLICENSED",

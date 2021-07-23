@@ -1,5 +1,3 @@
-'use strict';
-
 const addrPattern = /^(?:(\d{1,4}\.\d{1,4}):)?(\d{1,4}\.\d{1,4})$/;
 const partPattern = /^\d{1,4}\.\d{1,4}$/;
 const numberPattern = /\d{1,4}/g;
@@ -50,7 +48,7 @@ function unparseAddr(addr) {
 /**
  * Class containing a validated GERTe address.
  */
-class Address {
+export default class Address {
     #internal
     #external
 
@@ -143,5 +141,3 @@ class Address {
         return this.address;
     }
 }
-
-module.exports = Address;
